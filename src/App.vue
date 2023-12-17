@@ -51,6 +51,7 @@ const onSubmit = async (e)=>{
     </div>
     <div>
       <input type="submit" value="login">
+      <button @click="auth.resetAuth">logout</button>
     </div>
 
 

@@ -7,8 +7,11 @@ export const useAuthStore = defineStore("auth",()=>{
     const user = ref( JSON.parse( localStorage.getItem('user') ) );
     const logedIn = ref(false);
 
-    if(user){
+    if(user.value){
         logedIn.value = true;
+        socket.auth = {
+            email: user.value.email
+        }
         socket.connect();
     }
 

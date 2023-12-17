@@ -13,11 +13,6 @@ socket.on("disconnect",()=>{
     console.log("disconnected")
 })
 
-socket.on("new_notif",(data)=>{
-
-    console.log("new notfication for you",data);
-
-})
 
 
 socket.on("connect_error",(err)=>{
